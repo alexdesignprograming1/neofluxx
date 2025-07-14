@@ -48,7 +48,9 @@ section#hero .container div.hero-one {
 }
 section#hero .container div.hero-one p {
   max-width: 487px;
-  color: #B5B9A8;
+  color: #FFF9E9;
+  text-align: start;
+  font-size: 1.25rem;
 }
 section#hero .container div.hero-one h1 > span {
   color: #00DD7D;
@@ -103,6 +105,7 @@ main section#one .container .wrapper .one-div1 p {
   font-size: 1.125rem;
   color: #FFF9E9;
   opacity: 70%;
+  text-align: start;
 }
 main section#one .container .wrapper .one-div1 .--wrapper-p {
   display: flex;
@@ -149,6 +152,7 @@ main section#two .container p.subtitle {
   text-align: center;
   color: #B5B9A8;
   margin-bottom: 48px;
+  font-size: 1.25rem;
 }
 main section#two .container p.subtitle span {
   color: #00DD7D;
@@ -305,6 +309,7 @@ main section#three .container .wrapper .wrapper-items .title {
   font-weight: bold;
   margin-top: 24px;
   max-width: 571px;
+  color: #FFF9E9;
 }
 main section#three .container .wrapper .wrapper-items .subtitle {
   text-align: start;
@@ -471,6 +476,7 @@ main section#six .container .wrapper .wrapper-items .title {
   font-size: 2rem;
   font-weight: bold;
   max-width: 596px;
+  color: #FFF9E9;
 }
 main section#six .container .wrapper .wrapper-items .title span {
   color: #00DD7D;
@@ -530,6 +536,7 @@ main section#seven .container .wrapper .wrapper-items .title {
   font-size: 2rem;
   font-weight: bold;
   max-width: 596px;
+  color: #FFF9E9;
 }
 main section#seven .container .wrapper .wrapper-items .title span {
   color: #00DD7D;
@@ -653,11 +660,11 @@ footer#footer .container ul li p:nth-child(1) {
 footer#footer .container ul li p {
   color: #B5B9A8;
   font-weight: 400;
-  font-size: 0.875rem;
+  font-size: 0.875rem !important;
   text-align: start;
 }
 footer#footer .container ul li p:nth-child(1) {
-  font-size: 0.875rem;
+  font-size: 0.875rem !important;
   font-weight: 600;
   color: #FFF9E9;
 }
@@ -668,7 +675,7 @@ footer#footer .container .footer-logo {
   gap: 32px;
 }
 footer#footer .container .footer-logo p {
-  font-size: 0.625rem;
+  font-size: 0.625rem !important;
   color: #B5B9A8;
 }
 footer#footer::after {
@@ -681,6 +688,12 @@ footer#footer::after {
 }
 
 @media screen and (max-width: 960px) {
+  p {
+    font-size: 16px !important;
+  }
+  p.title {
+    font-size: 2rem !important;
+  }
   section#hero .container {
     justify-content: space-between;
     flex-direction: column-reverse;
@@ -721,6 +734,12 @@ footer#footer::after {
   main section#two .container .wrapper-cards {
     flex-direction: column;
     gap: 32px;
+  }
+  main section#two .container .wrapper-cards p.card-text {
+    font-size: 14px !important;
+  }
+  main section#two .container .wrapper-cards p.card-title {
+    font-size: 1.5rem !important;
   }
   main section#three {
     padding: 64px 0;
@@ -782,6 +801,7 @@ footer#footer::after {
     margin-top: 14px;
     max-width: 302px;
     margin-bottom: 32px;
+    font-size: 1.938rem;
   }
   main section#five .container h3 span {
     color: #00DD7D;
@@ -877,6 +897,12 @@ footer#footer::after {
     top: 190px;
     left: 15px;
     width: 240px;
+  }
+  main section#nine .container h2 {
+    font-size: 2rem;
+  }
+  main section#nine .container p.subtitle {
+    font-size: 1.125rem;
   }
   main section#nine .container .btn {
     min-width: 100%;

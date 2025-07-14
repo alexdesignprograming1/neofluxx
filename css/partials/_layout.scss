@@ -76,7 +76,9 @@ section#hero {
 
       p {
         max-width: 487px;
-        color: $white-dark;
+        color: #FFF9E9;
+        text-align: start;
+        font-size: 1.25rem;
       }
 
       h1>span {
@@ -143,6 +145,7 @@ main {
             font-size: 1.125rem;
             color: $white;
             opacity: 70%;
+            text-align: start;
           }
 
           .--wrapper-p {
@@ -208,6 +211,7 @@ main {
         }
 
         margin-bottom: 48px;
+        font-size: 1.25rem;
       }
 
       .wrapper-cards {
@@ -384,6 +388,7 @@ main {
             font-weight: bold;
             margin-top: 24px;
             max-width: 571px;
+            color: $white;
           }
 
           .subtitle {
@@ -588,6 +593,7 @@ main {
             font-size: 2rem;
             font-weight: bold;
             max-width: 596px;
+            color: $white;
 
             span {
               color: $green-ligth;
@@ -658,6 +664,7 @@ main {
             font-size: 2rem;
             font-weight: bold;
             max-width: 596px;
+            color: $white;
 
             span {
               color: $green-ligth;
@@ -809,12 +816,12 @@ footer#footer {
         p {
           color: $white-dark;
           font-weight: 400;
-          font-size: 0.875rem;
+          font-size: 0.875rem !important;
           text-align: start;
         }
 
         p:nth-child(1) {
-          font-size: 0.875rem;
+          font-size: 0.875rem !important;
           font-weight: 600;
           color: $white;
         }
@@ -829,7 +836,7 @@ footer#footer {
 
       p {
         
-        font-size: 0.625rem;
+        font-size: 0.625rem !important;
         color: $white-dark;
       }
     }
@@ -850,6 +857,14 @@ footer#footer {
 }
 
 @include responsive(s) {
+
+  p {
+    font-size: 16px !important;
+  }
+
+  p.title {
+    font-size: 2rem !important;
+  }
   
   section#hero {
   .container {
@@ -908,6 +923,14 @@ footer#footer {
       .wrapper-cards {
         flex-direction: column;
         gap: 32px;
+
+        p.card-text {
+          font-size: 14px !important;
+        }
+
+        p.card-title {
+          font-size: 1.5rem !important;
+        }
       }
      }
     }
@@ -997,6 +1020,7 @@ footer#footer {
         }
 
         margin-bottom: 32px;
+        font-size: 1.938rem;
       }
 
       .items-container { 
@@ -1130,6 +1154,15 @@ footer#footer {
 
     section#nine {
       .container {
+
+        h2 {
+          font-size: 2rem;
+        }
+
+        p.subtitle {
+          font-size: 1.125rem;
+        }
+
         .btn {
           min-width: 100%;
         }
