@@ -171,6 +171,7 @@ main section#two .container .wrapper-cards .wrapper-card .card-title {
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
+  color: #FFF9E9;
 }
 main section#two .container .wrapper-cards .wrapper-card .card-p {
   margin-top: 16px;
