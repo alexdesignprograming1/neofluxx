@@ -30,7 +30,7 @@
 </head>
 <body>
 
-   <!-- Header / Navegação -->
+  <!-- Header / Navegação -->
   <header id="header">
     <div class="header-wrapper"> 
       <div id="header-inner" class="header-inner">
@@ -41,13 +41,50 @@
             <img src="./assets/images/logo.png" alt="logo neofluxx">
           </a>
 
+          <!-- 1. Checkbox que guarda o estado (oculto) -->
+          <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+
+          <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+
           <nav class="nav">
             <ul>
               <li><a href="">Ferramentas</a></li>
               <li class="nav-login-li"><a href=""><span><img src="./assets/icons/user.svg" alt="login"></span> Login</a></li>
-              <li> <button type="button" id="open-demo" class="btn"> Solicitar demonstração </button> </li>
+              <li> <button type="button" id="open-demo" class="btn open-demo"> Solicitar demonstração </button> </li>
             </ul>
           </nav>
+
+          <!-- Menu mobile full‑screen -->
+          <nav id="mobile-menu" class="mobile-menu">
+
+            <div class="mobile-header-nav">
+              <button type="button" class="close-menu" id="btn-close" aria-label="Fechar menu">
+                <img style="width: 24px;" src="./assets/icons/CarteLeftGray.svg" alt="fechar menu">
+              </button>
+
+              <div>
+                <a href="/">
+                <img src="./assets/images/logo.png" alt="logo neofluxx">
+                </a>
+              </div>
+
+              <div></div>
+            </div>
+
+            <ul class="mobile-menu-list">
+              <li><button type="button" class="btn open-demo">Solicitar demonstração</button></li>
+              <div class="div-mobile">
+                <li><a href="">Login</a></li>
+                <li><a href="">Ferramentas</a></li>
+              </div>
+            </ul>
+          </nav>
+          
+
         </div>
 
       </div>
@@ -58,17 +95,45 @@
   <!-- Hero Section -->
   <section id="hero">
     <div class="container">
-      <div>
+      <div class="hero-one">
+        <div class="g1"></div>
         <h1>Inteligência que conecta. <span>Resultados que surpreendem.</span></h1>
         <p>Transforme cada conversa em valor de negócio com a plataforma omnichannel e automação de processos da Neofluxx.</p>
-        <button type="button" id="open-demo" class="btn"> Solicitar demonstração </button>
+        <button type="button" id="open-demo" class="btn open-demo"> Solicitar demonstração </button>
       </div>
 
-      <div class="image-hero">
-        <img src=".../../assets/images/arte-desktop.png" alt="pessoa segurando notebook acessando sistema neofluxx">
+       <div class="image-hero">
+        <img src=".../../assets/images/arte-desktop-b.png" alt="pessoa segurando notebook acessando sistema neofluxx">
       </div>
     </div>
   </section>
+
+  <!-- Modal de Solicitação -->
+  <dialog id="demo-dialog" class="demo-dialog">
+    <form method="dialog" class="demo-form">
+      <button type="button" class="close-btn" id="close-demo" aria-label="Fechar">
+        <img src="./assets/icons/close.svg" alt="fechar">
+      </button>
+      <h2>Solicitação de demonstração</h2>
+
+      <p>Transforme cada conversa em valor de negócio com a plataforma omnichannel e automação de processos da Neofluxx.</p>
+
+      <label for="demo-name">Nome</label>
+      <input type="text" id="demo-name" name="name" required />
+
+      <label for="demo-email">E-mail</label>
+      <input type="email" id="demo-email" name="email" required />
+
+      <label class="checkbox-label">
+        <input type="checkbox" id="demo-agree" name="agree" required />
+        Li e aceito os termos
+      </label>
+
+      <button type="submit" id="open-demo" class="btn submit-btn">
+        Solicitar demonstração
+      </button>
+    </form>
+  </dialog>
 
    <!-- Main Content -->
   <main>
@@ -82,7 +147,7 @@
             <div class="--wrapper-p">
               <p>Plataformas de atendimento tradicionais focam em “resolver tickets”. Nós focamos em criar relacionamentos duradouros — e receita previsível. </p>
 
-              <a href="">Descubra como <img src="./assets/icons/CaretRight.svg" alt="descubra como"></a>
+              <a class="open-demo">Descubra como <img src="./assets/icons/CaretRight.svg" alt="descubra como"></a>
             </div>
           </div>
           
@@ -390,7 +455,10 @@
     <section id="five">
       <div class="container">
 
-        <img src="./assets/images/arte4-desktop.png" alt="">
+        <div class="blur-wrapper">
+          <div class="g1"></div>
+          <img src="./assets/images/arte4-desktop.png" alt="">
+        </div>
 
         <h3>Conecte-se a sistemas externos e amplie o <span>Neofluxx</span></h3>
 
@@ -441,15 +509,15 @@
               </div>
 
               <div class="item">
-                <img src="./assets/icons/rectok.svg" alt="Direcione atendimentos para o profissional mais indicado">
-                <p>Direcione atendimentos para o profissional mais indicado</p>
-              </div>
-
-              <div class="item">
                 <img src="./assets/icons/rectok.svg" alt="Automatize processos e economize tempo">
                 <p>Automatize processos e economize tempo</p>
               </div>
 
+              <div class="item">
+                <img src="./assets/icons/rectok.svg" alt="Direcione atendimentos para o profissional mais indicado">
+                <p>Direcione atendimentos para o profissional mais indicado</p>
+              </div>
+              
               <div class="item">
                 <img src="./assets/icons/rectok.svg" alt="Produtividade máxima para a sua equipe">
                 <p>Produtividade máxima para a sua equipe</p>
@@ -498,11 +566,12 @@
         <div>
           <h3>Experiência que gera <br> <span>lealdade</span> e receita</h3>
           <p class="subtitle">Clientes utilizam o canal que preferem; sua equipe recebe contexto completo, aumentando a resolução no primeiro contato e as vendas cruzadas. Negócios que adotam essa abordagem criam consumidores fãs, não apenas satisfeitos.</p>
-          <button type="button" id="open-demo" class="btn">Solicitar demonstração</button>
+          <button type="button" id="open-demo" class="btn open-demo">Ver agente em ação</button>
         </div>
 
         <div class="img-eight">
-          <img src=".../../assets/images/people2.png" alt="pessoa segurando notebook acessando sistema neofluxx">
+          <img class="img-balon" src="./assets/images/balon.png" alt="suporte do sistema neofluxx">
+          <img src="./assets/images/people2.png" alt="pessoa segurando notebook acessando sistema neofluxx">
         </div>
       </div>
     </section>
@@ -513,7 +582,7 @@
         
         <p class="subtitle">Descubra como a Neofluxx unifica engajamento e automação em uma solução que simplesmente funciona.</p>
 
-        <button type="button" id="open-demo" class="btn"> Solicitar demonstração </button>
+        <button type="button" id="open-demo" class="btn open-demo"> Solicitar demonstração </button>
       </div>
     </section>
   </main>
@@ -542,7 +611,12 @@
       
         <li>
           <p>Redes sociais: </p>
-          <p>Level 1, 12 Sample St, Sydney NSW 2000</p>
+          <ul class="rede-social-footer">
+            <li><img src="./assets/icons/FacebookLogo.svg" alt="facebook"></li>
+            <li><img src="./assets/icons/InstagramLogo.svg" alt="instagram"></li>
+            <li><img src="./assets/icons/XLogo.svg" alt="X - Antigo twitter"></li>
+            <li><img src="./assets/icons/LinkedinLogo.svg" alt="linkedin"></li>
+          </ul>
         </li>
       </ul>
 

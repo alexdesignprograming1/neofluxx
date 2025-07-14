@@ -25,7 +25,7 @@ body {
 
   font-family: "Inter", sans-serif;
 
-  background: $green-background;
+  background: #001A0A;
 }
 
 svg, img {
@@ -78,4 +78,5 @@ ul {
 }
 
 @import "partials/menu";
+@import "partials/dialog";
 @import "partials/footer";
