@@ -218,6 +218,94 @@ main section#three .container .wrapper {
   justify-content: space-between;
   align-items: center;
 }
+main section#three .container .wrapper .fade-out {
+  opacity: 0;
+}
+main section#three .container .wrapper .icons-three .icon {
+  display: inline-block;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+main section#three .container .wrapper .icons-three .icon[data-channel=whatsapp]:hover {
+  background-color: #016624;
+}
+main section#three .container .wrapper .icons-three .icon[data-channel=instagram]:hover {
+  background-color: #B937AA;
+}
+main section#three .container .wrapper .icons-three .icon[data-channel=instagram]:hover path {
+  fill: #fff;
+}
+main section#three .container .wrapper .icons-three .icon[data-channel=facebook]:hover {
+  background-color: #7D4AFF;
+}
+main section#three .container .wrapper .icons-three .icon[data-channel=telegram]:hover {
+  background-color: #34AADF;
+}
+main section#three .container .wrapper .icons-three .icon[data-channel=telegram]:hover path {
+  fill: #fff;
+}
+main section#three .container .wrapper .icons-three .icon[data-channel=email]:hover {
+  background-color: #B042C9;
+}
+main section#three .container .wrapper .icons-three .icon[data-channel=email]:hover path {
+  fill: #fff;
+}
+main section#three .container .wrapper .icons-three .icon[data-channel=website]:hover {
+  background-color: #13CCC0;
+}
+main section#three .container .wrapper .icons-three .icon[data-channel=website]:hover path {
+  fill: #fff;
+}
+main section#three .container .wrapper .icons-three .icon[data-channel=sms]:hover {
+  background-color: #C3C53A;
+}
+main section#three .container .wrapper .icons-three .icon[data-channel=sms]:hover path {
+  fill: #fff;
+}
+main section#three .container .wrapper .icons-three {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+main section#three .container .wrapper .icons-three img {
+  padding: 12px;
+  cursor: pointer;
+  transition: background ease 0.2s;
+  border-radius: 12px;
+  transition: opacity 0.3s ease;
+}
+main section#three .container .wrapper .icons-three img:hover {
+  background: #016624;
+}
+main section#three .container .wrapper .icons-three svg {
+  width: 45px;
+  height: 45px;
+  padding: 12px;
+  cursor: pointer;
+  transition: background ease 0.2s;
+  border-radius: 12px;
+  transition: opacity 0.3s ease;
+}
+main section#three .container .wrapper .icons-three svg:hover {
+  background: #016624;
+}
+main section#three .container .wrapper .img-three {
+  position: relative;
+}
+main section#three .container .wrapper .img-three::after {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  width: 440px;
+  height: 356px;
+  background: #193022;
+  border-radius: 12px;
+  z-index: -1;
+}
 main section#three .container .wrapper .faq-accordion {
   display: none !important;
 }

@@ -280,6 +280,112 @@ main {
       }
 
       .wrapper {
+
+        .fade-out {
+          opacity: 0;
+        }
+
+        
+        //  Estilo base dos ícones
+        .icons-three .icon {
+          display: inline-block;
+          padding: 8px;
+          border-radius: 4px;
+          transition: background-color 0.3s ease;
+        }
+
+        // Cores de fundo diferentes no hover
+        .icons-three .icon[data-channel="whatsapp"]:hover {
+          background-color: #016624;
+        }
+        .icons-three .icon[data-channel="instagram"]:hover {
+          background-color: #B937AA;
+          path {
+            fill: #fff;
+          }
+        }
+        .icons-three .icon[data-channel="facebook"]:hover {
+          background-color: #7D4AFF;
+          // path {
+          //   fill: #fff;
+          // }
+        }
+        .icons-three .icon[data-channel="telegram"]:hover {
+          background-color: #34AADF;
+          path {
+            fill: #fff;
+          }
+        }
+        .icons-three .icon[data-channel="email"]:hover {
+          background-color: #B042C9;
+          path {
+            fill: #fff;
+          }
+        }
+        .icons-three .icon[data-channel="website"]:hover {
+          background-color: #13CCC0;
+          path {
+            fill: #fff;
+          }
+        }
+        .icons-three .icon[data-channel="sms"]:hover {
+          background-color: #C3C53A;
+          path {
+            fill: #fff;
+          }
+        }
+
+        .icons-three {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 12px;
+          img {
+            padding: 12px;
+            cursor: pointer;
+            transition: background ease 0.2s;
+            border-radius: 12px;
+            transition: opacity 0.3s ease;
+
+            &:hover {
+              background: #016624;
+            }
+          }
+
+          svg {
+            width: 45px;
+            height: 45px;
+            padding: 12px;
+            cursor: pointer;
+            transition: background ease 0.2s;
+            border-radius: 12px;
+            transition: opacity 0.3s ease;
+
+            &:hover {
+              background: #016624;
+            }
+          }
+        }
+
+        .img-three {
+          position: relative;
+
+          
+              
+          &::after {
+            content: "";
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            width: 440px;
+            height: 356px;
+            background: #193022;
+            border-radius: 12px;
+            z-index: -1;
+          }
+        }
+
         .faq-accordion {
           display: none !important;
         }
