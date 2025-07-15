@@ -80,6 +80,10 @@ $text-color: #fff;
 
 // End Navbar
 
+.no-scroll {
+  overflow: hidden !important;  // impede qualquer rolagem no body
+  height: 100vh !important;     // fixa a altura da viewport
+}
 
 @include responsive(s) {
 
@@ -131,6 +135,7 @@ $text-color: #fff;
         transform: translateX(-100%);
         transition: transform $transition-time ease;
         z-index: 10;
+        overflow: hidden;
 
         .mobile-header-nav {
           padding: 16px;
@@ -146,44 +151,48 @@ $text-color: #fff;
           }
         }
 
-        
+        .mobile-menu-list {
+    
+          .-list-header {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            gap: 16px;
+            width: 100%;
+            li a {
+              font-size: 1rem;
+            }
+
+            hr {
+              width: 100%;
+              opacity: 0.3;
+            }
+          }
+          .-list-footer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+             width: 100%;
+          }
+        }
 
         ul {
           list-style: none;
-          padding: 0;
+          padding: 0 16px;
           margin: 0;
           margin-top: 64px;
           height: 100%;
           display: flex;
           flex-direction: column;
-          justify-content: start;
-          align-items: center;
+          justify-content: space-between;
+          align-items: start;
+          gap: 16px;
+          height: 70dvh;
 
           .open-demo {
             min-width: 266px;
-          }
-
-          .div-mobile {
-            margin-top: 16px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8px;
-
-            li {
-              padding: 16px;
-              min-width: 124px;
-              min-height: 102px;
-              background-color: #0D2616;
-              border: 1px solid #61616132;
-              border-radius: 8px;
-              display: flex;
-              flex-direction: column;
-              justify-content: end;
-              align-items: center;
-              a {
-                font-size: 1rem;
-              }
-            }
           }
         }
       }

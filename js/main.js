@@ -198,3 +198,17 @@ if (icons.length) {
   const first = icons[0].dataset.channel;
   renderChannel(first);
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleCheckbox = document.getElementById('menu-toggle');
+  const closeBtn = document.getElementById('btn-close');
+
+  toggleCheckbox.addEventListener('change', () => {
+    document.body.classList.toggle('no-scroll', toggleCheckbox.checked);
+  });
+
+  closeBtn.addEventListener('click', () => {
+    toggleCheckbox.checked = false;
+    document.body.classList.remove('no-scroll');
+  });
+});
