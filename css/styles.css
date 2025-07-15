@@ -349,6 +349,9 @@ main section#three .container .wrapper .faq-answer {
   animation: fadeIn 0.3s ease;
   background: transparent;
 }
+main section#three .container .wrapper .faq-answer p:nth-child(1) {
+  text-align: start;
+}
 main section#three .container .wrapper .faq-answer p {
   color: #FFF9E9;
   font-size: 1rem;

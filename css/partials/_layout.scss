@@ -436,6 +436,10 @@ main {
           padding: 12px;
           animation: fadeIn 0.3s ease;
           background: transparent;
+          
+          p:nth-child(1) {
+            text-align: start;
+          }
 
           p {
             color: $white;
