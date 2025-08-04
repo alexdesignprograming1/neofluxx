@@ -1,0 +1,331 @@
+.pricing-page {
+
+  section.pricing-hero {
+    padding: 96px 0;
+    text-align: center;
+
+    .container {
+      flex-direction: column;
+      
+      .pretitle {
+        font-size: 0.875rem;
+        line-height: 150%;
+        letter-spacing: 0.1rem;
+        font-weight: 700;
+        color: $green-ligth;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+      }
+
+      .title {
+        font-size: 3.5rem;
+        max-width: 802px;
+
+        span {
+          color: $green-ligth;
+        }
+      }
+
+      .subtitle {
+        font-size: 1.25rem;
+        margin-top: 24px;
+        margin-bottom: 115px;
+        color: $white;
+        max-width: 802px;
+      }
+
+      .toggle-pricing {
+        display: inline-flex;
+        align-items: center;
+        border: 1px solid $green-ligth;
+        border-radius: 100px;
+        padding: 4px;
+        position: relative;
+
+        .toggle-btn {
+          width: 94px;
+          height: 40px;
+          border: none;
+          background: transparent;
+          color: $white;
+          font-size: 1rem;
+          cursor: pointer;
+          font-weight: 700;
+
+          &.active {
+            color: $green;
+            font-size: 1rem;
+            font-weight: 700;
+            background: $green-ligth;
+            border-radius: 100px;
+          }
+        }
+
+        .discount-note {
+          margin-left: 1rem;
+          font-size: 1.25rem;
+          color: $white;
+          font-family: "Shadows Into Light", cursive;
+          font-weight: 400;
+          position: absolute;
+          color: $green-ligth;
+          top: -60px;
+          left: 109px;
+          width: 100%;
+          z-index: -1;
+        }
+
+        .discount-note-img {
+          position: absolute;
+          width: 29px;
+          width: 30px;
+          height: 55px;
+          top: -20px;
+          left: 129px;
+          width: 109%;
+          z-index: -1;
+        }
+      }
+    }
+  }
+
+  section.pricing-cards {
+    padding: 96px 0;
+
+    .container {
+      .card-grid {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        gap: 22px;
+        width: 100%;
+      }
+
+      .card-price-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: start;
+        gap: 32px;
+
+        p {
+          text-align: start;
+        }
+
+        img {
+          margin: 0;
+        }
+      }
+
+      .plan-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 22px;
+      }
+      
+      .title {
+        font-size: 2rem;
+        color: $white;
+        font-weight: 700;
+      }
+
+      .plan-card {
+        background: #162E1E;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        min-width: 204px;
+        max-width: 280px;
+
+        .btn {
+          min-width: 164px;
+          max-width: 232px !important;
+        }
+
+        .plan-card-title {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+
+          img  {
+            margin: 0;
+          }
+        }
+
+        .plan-label {
+          font-weight: bold;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+
+          text-align: start;
+
+          font-weight: 1.25rem;
+          color: $white;
+          font-weight: 600;
+
+          span {
+            font-size: 12px;
+            font-weight: 400;
+            text-transform: capitalize !important;
+          }
+
+        }
+
+        .plan-price {
+          font-size: 2rem;
+          color: $green-ligth;
+          font-weight: 700;
+          opacity: 0;
+          transition: opacity .2s;
+
+          &.active {
+            opacity: 1;
+          }
+
+          span {
+            display: block;
+            font-size: 0.875rem;
+            color: $white-dark;
+            font-weight: 400;
+            margin: 0;
+            padding: 0;
+          }
+        }
+
+        .plan-price.mensal.active,
+        .plan-price.anual.active {
+          opacity: 1;
+        }
+
+        .btn {
+          margin-bottom: 1rem;
+        }
+        
+        .line-price {
+          margin-top: 24px;
+          margin-bottom: 32px;
+        }
+
+        .plan-features {
+          list-style: none;
+          padding: 0;
+         
+          li {
+            margin-bottom: .5rem;
+            color: $white;
+          }
+        }
+
+        &.recommended {
+          border: 2px solid $white;
+        }
+      }
+    }
+  }
+
+  .features-table {
+    padding: 2rem 0;
+
+    .table-group {
+      margin-bottom: 2rem;
+
+      .table-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+
+        th,
+        td {
+          padding: .75rem;
+          text-align: center;
+          border: 1px solid rgba(255, 255, 255, .1);
+        }
+
+        th {
+          background: rgba(255, 255, 255, .05);
+        }
+
+        td.check::before {
+          content: '\2713';
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .faq-section {
+    padding: 2rem 0;
+
+    .accordion-item {
+      border-bottom: 1px solid rgba(255, 255, 255, .1);
+
+      .accordion-header {
+        width: 100%;
+        text-align: left;
+        padding: 1rem 0;
+        background: none;
+        border: none;
+        color: $white;
+        font-size: 1rem;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+      }
+
+      .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .3s;
+        margin-bottom: 0;
+      }
+
+      &.open {
+        .accordion-content {
+          max-height: 200px;
+          margin-top: .5rem;
+        }
+      }
+    }
+  }
+}
+
+// Mobile Collapse Groups
+@media (max-width: 768px) {
+  .features-table .table-group {
+    margin-bottom: 1rem;
+
+    table {
+      display: none;
+    }
+
+    h2.table-title {
+      cursor: pointer;
+      position: relative;
+
+      &::after {
+        content: '\25BC';
+        position: absolute;
+        right: 0;
+        transition: transform .2s;
+      }
+    }
+
+    &.open table {
+      display: table;
+    }
+
+    &.open h2.table-title::after {
+      transform: rotate(180deg);
+    }
+  }
+}

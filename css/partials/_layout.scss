@@ -893,74 +893,74 @@ main {
   }
 }
 
-footer#footer {
-  background: $green-footer;
-  position: relative;
+// footer#footer {
+//   background: $green-footer;
+//   position: relative;
 
-  .container {
-    min-height: 327px;
+//   .container {
+//     min-height: 327px;
 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 56px;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     gap: 56px;
 
-    ul {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+//     ul {
+//       width: 100%;
+//       display: flex;
+//       justify-content: space-between;
+//       align-items: center;
 
-      .rede-social-footer {
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        gap: 12px;
-      }
+//       .rede-social-footer {
+//         display: flex;
+//         justify-content: start;
+//         align-items: center;
+//         gap: 12px;
+//       }
 
-      li {
-        p:nth-child(1) {
-          margin-bottom: 12px;
-        }
+//       li {
+//         p:nth-child(1) {
+//           margin-bottom: 12px;
+//         }
 
-        p {
-          color: $white-dark;
-          font-weight: 400;
-          font-size: 0.875rem !important;
-          text-align: start;
-        }
+//         p {
+//           color: $white-dark;
+//           font-weight: 400;
+//           font-size: 0.875rem !important;
+//           text-align: start;
+//         }
 
-        p:nth-child(1) {
-          font-size: 0.875rem !important;
-          font-weight: 600;
-          color: $white;
-        }
-      }
-    }
+//         p:nth-child(1) {
+//           font-size: 0.875rem !important;
+//           font-weight: 600;
+//           color: $white;
+//         }
+//       }
+//     }
 
-    .footer-logo {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 32px;
+//     .footer-logo {
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       gap: 32px;
 
-      p {
+//       p {
         
-        font-size: 0.625rem !important;
-        color: $white-dark;
-      }
-    }
-  }
+//         font-size: 0.625rem !important;
+//         color: $white-dark;
+//       }
+//     }
+//   }
 
-  &::after {
-    content: "";
-    width: 100%;
-    position: absolute;
-    background: $green-ligth;
-    bottom: 0;
-    height: 6px;
-  }
-}
+//   &::after {
+//     content: "";
+//     width: 100%;
+//     position: absolute;
+//     background: $green-ligth;
+//     bottom: 0;
+//     height: 6px;
+//   }
+// }
 
 @include responsive(m) {
   //aqui responsivel

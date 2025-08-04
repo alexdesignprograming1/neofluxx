@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neofluxx - Preços</title>
+  <link rel="canonical" href="https://neofluxx.com" />
+  <meta name="keywords" content="neofluxx,omnichannel,automação,processos,inteligência artificial,atendimento ao cliente,customer engagement,plataforma de atendimento,instagram,whatsapp,telegram,fluxos de trabalho,integração de canais">
+  <meta name="robots" content="index, follow">
+
+  <link rel="icon" href="./assets/icons/favicon.svg" />
+  
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Neofluxx - Preços">
+  <meta property="og:description" content="Plataforma Omnichannel que integra automação de processos com Inteligência Artificial para transformar cada conversa em valor de negócio.">
+  <meta property="og:url" content="https://neofluxx.com">
+  <meta property="og:image" content="https://neofluxx.com/assets/images/neofluxx-simbolo.jpg" />
+  <meta property="og:site_name" content="Neofluxx - Preços" />
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Shadows+Into+Light&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+  <!-- Header / Navegação -->
+  <header id="header">
+    <div class="header-wrapper">
+      <div id="header-inner" class="header-inner">
+
+        <div class="container">
+
+          <a href="/">
+            <img src="./assets/images/logo.png" alt="logo neofluxx">
+          </a>
+
+          <!-- 1. Checkbox que guarda o estado (oculto) -->
+          <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+
+          <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+
+          <nav class="nav">
+            <ul>
+              <li><a href="./tools.html">Funcionalidades</a></li>
+              <li><a href="./price.html">Preços</a></li>
+              <li class="nav-login-li"><a href=""><span><img src="./assets/icons/user.svg" alt="login"></span> Login</a>
+              </li>
+              <li> <button type="button" id="open-demo" class="btn open-demo"> Solicitar demonstração </button> </li>
+            </ul>
+          </nav>
+
+          <!-- Menu mobile full‑screen -->
+          <nav id="mobile-menu" class="mobile-menu">
+
+            <div class="mobile-header-nav">
+              <button type="button" class="close-menu" id="btn-close" aria-label="Fechar menu">
+                <img style="width: 24px;" src="./assets/icons/CarteLeftGray.svg" alt="fechar menu">
+              </button>
+
+              <div>
+                <a href="/">
+                  <img src="./assets/images/logo.png" alt="logo neofluxx">
+                </a>
+              </div>
+
+              <div></div>
+            </div>
+
+            <ul class="mobile-menu-list">
+              <div class="-list-header">
+                <li><a href="">Login</a></li>
+                <hr>
+                <li><a href="./tools.html">Funcionalidades</a></li>
+                <hr>
+                <li><a href="./price.html">Preços</a></li>
+              </div>
+
+              <div class="-list-footer">
+                <li class="button-li"><button type="button" class="btn open-demo">Solicitar demonstração</button></li>
+              </div>
+
+            </ul>
+          </nav>
+
+
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="pricing-page">
+    <!-- Hero / Título + Toggle -->
+    <section class="pricing-hero">
+      <div class="container">
+        <p class="pretitle">PLANOS &amp; PREÇOS</p>
+        <h1 class="title">
+          Opções de preços <span>personalizadas</span> para atender às suas necessidades
+        </h1>
+        <p class="subtitle">
+          Experimente a diferença de preços personalizados conosco – onde suas necessidades moldam o plano perfeito, projetado exclusivamente para você
+        </p>
+        <div class="toggle-pricing">
+          <button class="toggle-btn active" data-type="mensal">Mensal</button>
+          <button class="toggle-btn" data-type="anual">Anual</button>
+          <span class="discount-note">Até 10% de desconto</span>
+          <img class="discount-note-img" src="./assets/icons/price-arrow.svg" alt="desconto">
+        </div>
+      </div>
+    </section>
+
+    <!-- Valores em reais / Cards de Planos -->
+    <section class="pricing-cards">
+      <div class="container">
+        <div class="card-grid">
+          <div class="card-price-title">
+            <img src="./assets/icons/price-value.svg" alt="">
+            <p class="title">Valores <br>em reais</p>
+          </div>
+
+          <div class="plan-wrapper">
+            <!-- Starter -->
+            <div class="plan-card">
+              <div class="plan-card-title">
+                <img src="./assets/icons/starter.svg" alt="starter">
+                <p class="plan-label"><span>plano</span> Starter</p>
+              </div>
+              <p class="plan-price mensal">R$ 920,00<br><span>por mês</span></p>
+              <p class="plan-price anual">R$ 8.064,00<br><span>por ano</span></p>
+              <button class="btn btn-primary">Eu quero</button>
+              <img class="line-price" src="./assets/icons/line.svg" alt="Eu quero">
+              <ul class="plan-features">
+                <li>5 agentes</li>
+                <li>2 caixas de entrada</li>
+                <li>5.000 contatos</li>
+                <li>500 conversas</li>
+              </ul>
+            </div>
+            <!-- Scale -->
+            <div class="plan-card recommended">
+              <div class="plan-card-title">
+                <img src="./assets/icons/starter.svg" alt="starter">
+                <p class="plan-label"><span>plano</span> Scale</p>
+              </div>
+              <p class="plan-price mensal">R$ 1.782,00<br><span>por mês</span></p>
+              <p class="plan-price anual">R$ 15.180,00<br><span>por ano</span></p>
+              <button class="btn btn-primary">Eu quero</button>
+              <img class="line-price" src="./assets/icons/line.svg" alt="Eu quero">
+              <ul class="plan-features">
+                <li>10 agentes</li>
+                <li>4 caixas de entrada</li>
+                <li>10.000 contatos</li>
+                <li>1.000 conversas</li>
+              </ul>
+            </div>
+            <!-- Pro -->
+            <div class="plan-card">
+              <div class="plan-card-title">
+                <img src="./assets/icons/starter.svg" alt="starter">
+                <p class="plan-label"><span>plano</span> Pro</p>
+              </div>
+              <p class="plan-price mensal">R$ 2.644,00<br><span>por mês</span></p>
+              <p class="plan-price anual">R$ 22.656,00<br><span>por ano</span></p>
+              <button class="btn btn-primary">Eu quero</button>
+              <img class="line-price" src="./assets/icons/line.svg" alt="Eu quero">
+              <ul class="plan-features">
+                <li>20 agentes</li>
+                <li>6 caixas de entrada</li>
+                <li>20.000 contatos</li>
+                <li>1.500 conversas</li>
+              </ul>
+            </div>
+            <!-- Enterprise -->
+            <div class="plan-card">
+              <div class="plan-card-title">
+                <img src="./assets/icons/starter.svg" alt="starter">
+                <p class="plan-label"><span>plano</span> Enterprise</p>
+              </div>
+              <p class="plan-price mensal">R$ 3.574,00<br><span>por mês</span></p>
+              <p class="plan-price anual">R$ 30.672,00<br><span>por ano</span></p>
+              <button class="btn btn-primary">Eu quero</button>
+              <img class="line-price" src="./assets/icons/line.svg" alt="Eu quero">
+              <ul class="plan-features">
+                <li>40 agentes</li>
+                <li>8 caixas de entrada</li>
+                <li>50.000 contatos</li>
+                <li>2.500 conversas</li>
+              </ul>
+            </div>
+          </div>
+          
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabelas de recursos por Seção -->
+    <section class="features-table">
+      <div class="container">
+        <!-- Exemplo de Seção "Canais" -->
+        <div class="table-group">
+          <h2 class="table-title">Canais</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Recursos</th>
+                <th>Starter</th>
+                <th>Scale</th>
+                <th>Pro</th>
+                <th>Enterprise</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>WhatsApp</td><td class="check"></td><td class="check"></td><td class="check"></td><td class="check"></td></tr>
+              <tr><td>Chat ao vivo no site</td><td class="check"></td><td class="check"></td><td class="check"></td><td class="check"></td></tr>
+              <tr><td>Facebook</td><td class="check"></td><td class="check"></td><td class="check"></td><td class="check"></td></tr>
+              <tr><td>Instagram</td><td class="check"></td><td class="check"></td><td class="check"></td><td class="check"></td></tr>
+              <tr><td>E-mail</td><td class="check"></td><td class="check"></td><td class="check"></td><td class="check"></td></tr>
+              <tr><td>Telegram</td><td class="check"></td><td class="check"></td><td class="check"></td><td class="check"></td></tr>
+              <tr><td>Line</td><td class="check"></td><td class="check"></td><td class="check"></td><td class="check"></td></tr>
+              <tr><td>Canal API</td><td class="check"></td><td class="check"></td><td class="check"></td><td class="check"></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- Crie mais .table-group para Produtos, Gerenciar, Analisar, Produtividade -->
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+      <div class="container">
+        <h2 class="faq-title">Perguntas frequentes</h2>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header">A Neofluxx oferece um período de teste?</button>
+            <div class="accordion-content">Sim, oferecemos 14 dias gratuitos para testar todas as funcionalidades.</div>
+          </div>
+          <!-- Outros itens conforme imagem -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal de Solicitação -->
+  <dialog id="demo-dialog" class="demo-dialog">
+    <form method="dialog" class="demo-form">
+      <button type="button" class="close-btn" id="close-demo" aria-label="Fechar">
+        <img src="./assets/icons/close.svg" alt="fechar">
+      </button>
+      <h2>Solicitação de demonstração</h2>
+
+      <p>Transforme cada conversa em valor de negócio com a plataforma omnichannel e automação de processos da Neofluxx.
+      </p>
+
+      <label for="demo-name">Nome *</label>
+      <input type="text" id="demo-name" name="name" placeholder="Digite seu nome completo" required />
+
+      <label for="demo-email">E-mail *</label>
+      <input type="email" id="demo-email" name="email" placeholder="seu@email.com" required />
+
+      <label for="demo-whatsapp">WhatsApp *</label>
+      <input type="tel" id="demo-whatsapp" name="whatsapp" placeholder="(11) 99999-9999" required />
+
+      <label class="checkbox-label">
+        <input type="checkbox" id="demo-agree" name="agree" required />
+        Li e aceito os termos
+      </label>
+
+      <button type="submit" id="open-demo" class="btn submit-btn">
+        Solicitar demonstração
+      </button>
+    </form>
+  </dialog>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container">
+
+      <ul>
+        <li>
+          <p>Endereço: </p>
+          <p>Av Paulista Nº 1636 - Cj 03 - 1º andar - Salas 103 E 105</p>
+          <p>Bela Vista - CEP: 01310-200 - São Paulo - SP</p>
+        </li>
+        <li>
+          <p>Contato: </p>
+          <p>contato@neofluxx.com</p>
+        </li>
+        <li>
+          <p>CNPJ: </p>
+          <p>61.806.245/0001-03</p>
+        </li>
+        <li>
+          <p>Legal: </p>
+          <p><a href="/politica-de-privacidade.html" class="footer-legal-links">Política de Privacidade</a></p>
+          <p><a href="/termos-de-servico.html" class="footer-legal-links">Termos de Serviço</a></p>
+        </li>
+        <li>
+          <p>Redes sociais: </p>
+          <ul class="rede-social-footer">
+            <li><img src="./assets/icons/FacebookLogo.svg" alt="facebook"></li>
+            <li><img src="./assets/icons/InstagramLogo.svg" alt="instagram"></li>
+            <li><img src="./assets/icons/XLogo.svg" alt="X - Antigo twitter"></li>
+            <li><img src="./assets/icons/LinkedinLogo.svg" alt="linkedin"></li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="footer-logo">
+        <img src="./assets/images/logo-footer.png" alt="logo neofluxx">
+        <p>©
+          <script>document.write(new Date().getFullYear());</script> Neofluxx. Todos os direitos reservados.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
