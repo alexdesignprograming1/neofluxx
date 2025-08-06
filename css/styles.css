@@ -1079,11 +1079,13 @@ strong {
 }
 
 .pricing-page section.pricing-hero {
+  overflow: hidden;
   padding: 96px 0;
   text-align: center;
 }
 .pricing-page section.pricing-hero .container {
   flex-direction: column;
+  position: relative;
 }
 .pricing-page section.pricing-hero .container .g1 {
   position: absolute;
@@ -1105,7 +1107,7 @@ strong {
   mix-blend-mode: hard-light;
   width: 65%;
   height: 23%;
-  top: 50%;
+  top: 80%;
   left: 18%;
   transform-origin: center center;
   animation: moveVertical 30s ease infinite;
@@ -1147,7 +1149,7 @@ strong {
   font-size: 1.25rem;
   margin-top: 24px;
   margin-bottom: 115px;
-  color: #B5B9A8;
+  color: #FFF9E9;
   max-width: 802px;
 }
 .pricing-page section.pricing-hero .container .toggle-pricing {
@@ -1157,6 +1159,7 @@ strong {
   border-radius: 100px;
   padding: 4px;
   position: relative;
+  background: #0D2616;
 }
 .pricing-page section.pricing-hero .container .toggle-pricing .toggle-btn {
   width: 94px;
@@ -1228,6 +1231,7 @@ strong {
   margin: 0;
 }
 .pricing-page section.pricing-cards .container .plan-wrapper {
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: start;
@@ -1255,7 +1259,10 @@ strong {
 }
 .pricing-page section.pricing-cards .container .plan-card .mes,
 .pricing-page section.pricing-cards .container .plan-card .ano {
+  text-align: center;
+  font-size: 14px;
   margin-bottom: 24px;
+  justify-content: center;
 }
 .pricing-page section.pricing-cards .container .plan-card::before {
   content: "";
@@ -1509,6 +1516,91 @@ strong {
 .pricing-page section.pricing-cards .faq-answer li:last-child {
   border-bottom: 1px solid rgba(181, 185, 168, 0.0941176471);
 }
+.pricing-page .pricing-cards-info {
+  position: relative;
+  display: none;
+  justify-content: end;
+  align-items: start;
+  max-width: 1220px;
+  gap: 22px;
+  margin: 0 auto;
+  width: 100%;
+}
+.pricing-page .pricing-cards-info .item-card-plan {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  border-radius: 12px;
+  background: #162E1E;
+  padding-top: 34px;
+  width: 204px;
+  height: 112px;
+  transition: height 0.3s ease;
+}
+.pricing-page .pricing-cards-info .item-card-plan .more-btn {
+  display: none;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 160px !important;
+  min-width: 160px !important;
+}
+.pricing-page .pricing-cards-info .item-card-plan .more-btn {
+  max-width: 160px !important;
+}
+.pricing-page .pricing-cards-info .item-card-plan:hover {
+  height: 170px;
+}
+.pricing-page .pricing-cards-info .item-card-plan:hover .more-btn {
+  display: block;
+}
+.pricing-page .pricing-cards-info .item-card-plan .plan-card-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.pricing-page .pricing-cards-info .item-card-plan .plan-card-title img {
+  margin: 0;
+}
+.pricing-page .pricing-cards-info .item-card-plan .plan-label {
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: start;
+  font-weight: 1.25rem;
+  color: #FFF9E9;
+  font-weight: 600;
+}
+.pricing-page .pricing-cards-info .item-card-plan .plan-label span {
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: capitalize !important;
+  color: #B5B9A8;
+}
+.pricing-page .pricing-cards-info .item-card-plan::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 101%;
+  height: 100.4%;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(180deg, #102019, #00e676, #11231B);
+}
+.pricing-page .pricing-cards-info.fixed {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: transparent;
+}
 .pricing-page .features-table {
   padding: 2rem 0;
 }
@@ -1521,7 +1613,7 @@ strong {
   margin-bottom: 2rem;
 }
 .pricing-page .features-table .table-group .table-title {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 46px;
 }
 .pricing-page .features-table .table-group table {
@@ -1557,7 +1649,7 @@ strong {
 }
 .pricing-page .features-table .table-group table td:first-child {
   min-width: 310px;
-  height: 60px;
+  height: 80px;
   color: #FFF9E9;
   font-weight: 700;
   text-align: start;
@@ -1621,8 +1713,22 @@ strong {
   .pricing-page section.pricing-hero .container .pretitle {
     font-size: 0.875rem;
   }
-  .pricing-page section.pricing-hero .container .g1, .pricing-page section.pricing-hero .container .g2, .pricing-page section.pricing-hero .container .g3 {
-    display: none !important;
+  .pricing-page section.pricing-hero .container .g1 {
+    background: radial-gradient(circle at center, rgb(195, 255, 212) 0, rgba(108, 181, 129, 0) 50%) no-repeat;
+    width: 65%;
+    height: 48%;
+    top: 77%;
+    left: 20%;
+  }
+  .pricing-page section.pricing-hero .container .g2 {
+    background: radial-gradient(circle at center, rgb(195, 255, 212) 0, rgba(108, 181, 129, 0) 50%) no-repeat;
+    width: 100%;
+    height: 70%;
+    top: -10%;
+    left: 4%;
+  }
+  .pricing-page section.pricing-hero .container .g3 {
+    display: none;
   }
   .pricing-page section.pricing-hero .container .title {
     font-size: 2.125rem;

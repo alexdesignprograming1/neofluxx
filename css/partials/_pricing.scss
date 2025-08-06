@@ -1,10 +1,12 @@
 .pricing-page {
   section.pricing-hero {
+    overflow: hidden;
     padding: 96px 0;
     text-align: center;
 
     .container {
       flex-direction: column;
+      position: relative;
 
       .g1 {
         position: absolute;
@@ -27,7 +29,7 @@
         mix-blend-mode: hard-light;
         width: 65%;
         height: 23%;
-        top: 50%;
+        top: 80%;
         left: 18%;
         transform-origin: center center;
         animation: moveVertical 30s ease infinite;
@@ -74,17 +76,19 @@
         font-size: 1.25rem;
         margin-top: 24px;
         margin-bottom: 115px;
-        color: $white-dark;
+        color: $white;
         max-width: 802px;
       }
 
       .toggle-pricing {
+        //min-width: 230px;
         display: inline-flex;
         align-items: center;
         border: 1px solid $green-ligth;
         border-radius: 100px;
         padding: 4px;
         position: relative;
+        background: #0D2616;
 
         .toggle-btn {
           width: 94px;
@@ -174,6 +178,7 @@
         }
   
         .plan-wrapper {
+          z-index: 1;
           display: flex;
           justify-content: space-between;
           align-items: start;
@@ -205,7 +210,10 @@
   
           .mes,
           .ano {
+            text-align: center;
+            font-size: 14px;
             margin-bottom: 24px;
+            justify-content: center;
           }
   
           &::before {
@@ -363,7 +371,6 @@
   
         }
       }
-      
 
       .faq-accordion {
         margin-top: 56px;
@@ -525,6 +532,109 @@
       }
   }
 
+  .pricing-cards-info {
+    position: relative;
+    display: none;
+    justify-content: end;
+    align-items: start;
+    max-width: 1220px;
+    gap: 22px;
+    margin: 0 auto;
+    width: 100%;
+
+    .item-card-plan {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      border-radius: 12px;
+      background: #162E1E;
+      padding-top: 34px;
+      width: 204px;
+      height: 112px;
+      transition: height 0.3s ease;
+
+      .more-btn {
+        display: none;
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 160px !important;
+        min-width: 160px !important;
+      }
+      
+      .more-btn {
+        max-width: 160px !important;
+
+      }
+
+      &:hover {
+        height: 170px; 
+        .more-btn {
+          display: block;
+        }
+      }
+
+      .plan-card-title {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+      
+          img {
+            margin: 0;
+          }
+      }
+      
+      .plan-label {
+          font-weight: bold;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+      
+          text-align: start;
+      
+          font-weight: 1.25rem;
+          color: $white;
+          font-weight: 600;
+      
+          span {
+            font-size: 12px;
+            font-weight: 400;
+            text-transform: capitalize !important;
+            color: $white-dark;
+          }
+      
+      }
+
+      &::before {
+            content: "";
+            position: absolute;
+            top: -1px;
+            right: -1px;
+            width: 101%;
+            height: 100.4%;
+            //background-color: red;
+            z-index: -1;
+            border-radius: inherit;
+            background: linear-gradient(180deg, #102019, #00e676, #11231B);
+      }
+    }
+
+
+    &.fixed {
+      position: fixed;
+      top: 80px;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: transparent;
+      //padding-top: 2px;
+    }
+  } 
+
   .features-table {
     padding: 2rem 0;
 
@@ -538,7 +648,7 @@
       margin-bottom: 2rem;
 
     .table-title {
-      font-size: 1.5rem;
+      font-size: 2rem;
       margin-bottom: 46px;
     }
 
@@ -585,7 +695,7 @@
       // células da primeira coluna (nome)
       td:first-child {
         min-width: 310px;
-        height: 60px;
+        height: 80px;
         color: $white;
         font-weight: 700;
         text-align: start;
@@ -676,9 +786,25 @@
           font-size: 0.875rem;
         }
 
-        .g1, .g2, .g3 {
-          display: none !important;
-        } 
+        .g1 {
+          background: radial-gradient(circle at center, rgba(195, 255, 212, 1) 0, rgba(108, 181, 129, 0) 50%) no-repeat;
+          width: 65%;
+          height: 48%;
+          top: 77%;
+          left: 20%;
+        }
+
+        .g2 {
+          background: radial-gradient(circle at center, rgb(195, 255, 212) 0, rgba(108, 181, 129, 0) 50%) no-repeat;
+          width: 100%;
+          height: 70%;
+          top: -10%;
+          left: 4%;
+        }
+
+        .g3 {
+          display: none;
+        }
 
         .title {
           font-size: 2.125rem;

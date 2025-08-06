@@ -295,3 +295,35 @@ document.querySelectorAll('.accordion-header').forEach(header => {
     }
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const cards        = document.querySelector('.pricing-cards-info');
+  const table        = document.querySelector('.features-table');
+  const headerH      = document.querySelector('#header').offsetHeight;
+  const tableTop     = table.offsetTop;
+  const tableHeight  = table.offsetHeight;
+  const buffer       = 200; // px antes do fim da tabela para esconder
+  const minWidthShow = 960; // px — abaixo disso nunca exibe
+
+  const tableEndThreshold = tableTop + tableHeight - buffer;
+
+  function updateCardsVisibility() {
+    const scrollPos = window.scrollY + headerH;
+    const isWide   = window.innerWidth >= minWidthShow;
+    const inRange  = scrollPos >= tableTop && scrollPos < tableEndThreshold;
+
+    if (isWide && inRange) {
+      cards.classList.add('fixed');
+      cards.style.display = 'flex';
+    } else {
+      cards.classList.remove('fixed');
+      cards.style.display = 'none';
+    }
+  }
+
+  window.addEventListener('scroll', updateCardsVisibility);
+  window.addEventListener('resize', updateCardsVisibility);
+
+  // inicializa no load
+  updateCardsVisibility();
+});
