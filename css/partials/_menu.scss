@@ -43,6 +43,12 @@ $text-color: #fff;
 
         li a {
           font-size: 1rem;
+
+           transition: color ease 0.2s;
+
+          &:hover {
+            color: #00DD7D;
+          }
         }
 
         .nav-login-li a {

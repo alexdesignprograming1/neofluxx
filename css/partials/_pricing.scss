@@ -1,11 +1,55 @@
 .pricing-page {
-
   section.pricing-hero {
     padding: 96px 0;
     text-align: center;
 
     .container {
       flex-direction: column;
+
+      .g1 {
+        position: absolute;
+        background: radial-gradient(circle at center, rgba(195 255 212 / 80%) 0, rgba(108, 181, 129, 0) 50%) no-repeat;
+        mix-blend-mode: hard-light;
+        width: 65%;
+        height: 23%;
+        top: 19%;
+        left: -19%;
+        transform-origin: center center;
+        animation: moveVertical 30s ease infinite;
+        opacity: 1;
+        z-index: -1;
+        filter: blur(145px);
+      }
+
+      .g2 {
+        position: absolute;
+        background: radial-gradient(circle at center, rgba(195 255 212 / 80%) 0, rgba(108, 181, 129, 0) 50%) no-repeat;
+        mix-blend-mode: hard-light;
+        width: 65%;
+        height: 23%;
+        top: 50%;
+        left: 18%;
+        transform-origin: center center;
+        animation: moveVertical 30s ease infinite;
+        opacity: 1;
+        z-index: -1;
+        filter: blur(145px);
+      }
+
+      .g3 {
+        position: absolute;
+        background: radial-gradient(circle at center, rgba(195 255 212 / 80%) 0, rgba(108, 181, 129, 0) 50%) no-repeat;
+        mix-blend-mode: hard-light;
+        width: 65%;
+        height: 23%;
+        top: 19%;
+        left: 55%;
+        transform-origin: center center;
+        animation: moveVertical 30s ease infinite;
+        opacity: 1;
+        z-index: -1;
+        filter: blur(145px);
+      }
       
       .pretitle {
         font-size: 0.875rem;
@@ -30,7 +74,7 @@
         font-size: 1.25rem;
         margin-top: 24px;
         margin-bottom: 115px;
-        color: $white;
+        color: $white-dark;
         max-width: 802px;
       }
 
@@ -79,10 +123,10 @@
           position: absolute;
           width: 29px;
           width: 30px;
+          width: 55px;
           height: 55px;
           top: -20px;
-          left: 129px;
-          width: 109%;
+          left: 229px;
           z-index: -1;
         }
       }
@@ -90,181 +134,484 @@
   }
 
   section.pricing-cards {
-    padding: 96px 0;
+      padding: 96px 16px;
+      background: linear-gradient(
+        to bottom,
+        #0D2616 23%,
+        #001A0A 100%
+      );
 
-    .container {
-      .card-grid {
-        display: flex;
-        justify-content: space-between;
-        align-items: start;
-        gap: 22px;
-        width: 100%;
-      }
-
-      .card-price-title {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        text-align: start;
-        gap: 32px;
-
-        p {
-          text-align: start;
+      .container {
+        .title-mobile {
+          display: none;
         }
-
-        img {
-          margin: 0;
-        }
-      }
-
-      .plan-wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 22px;
-      }
-      
-      .title {
-        font-size: 2rem;
-        color: $white;
-        font-weight: 700;
-      }
-
-      .plan-card {
-        background: #162E1E;
-        border-radius: 12px;
-        display: flex;
-        flex-direction: column;
-        padding: 20px;
-        min-width: 204px;
-        max-width: 280px;
-
-        .btn {
-          min-width: 164px;
-          max-width: 232px !important;
-        }
-
-        .plan-card-title {
+        
+        .card-grid {
           display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 10px;
-
-          img  {
-            margin: 0;
-          }
+          justify-content: space-between;
+          align-items: start;
+          gap: 22px;
+          width: 100%;
         }
-
-        .plan-label {
-          font-weight: bold;
+  
+        .card-price-title {
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: flex-start;
-
           text-align: start;
-
-          font-weight: 1.25rem;
-          color: $white;
-          font-weight: 600;
-
-          span {
-            font-size: 12px;
-            font-weight: 400;
-            text-transform: capitalize !important;
+          gap: 32px;
+  
+          p {
+            text-align: start;
+          }
+  
+          img {
+            margin: 0;
           }
 
+          
         }
-
-        .plan-price {
+  
+        .plan-wrapper {
+          display: flex;
+          justify-content: space-between;
+          align-items: start;
+          gap: 22px;
+        }
+  
+        .title {
           font-size: 2rem;
-          color: $green-ligth;
+          color: $white;
           font-weight: 700;
-          opacity: 0;
-          transition: opacity .2s;
-
-          &.active {
+        }
+  
+        .plan-card {
+          padding: 40px 20px;
+          background: #162E1E;
+          border-radius: 12px;
+          display: flex;
+          flex-direction: column;
+          min-width: 230px;
+          max-width: 280px;
+  
+          position: relative;
+          //overflow: hidden; 
+  
+          .anual,
+          .ano {
+            display: none;
+          }
+  
+          .mes,
+          .ano {
+            margin-bottom: 24px;
+          }
+  
+          &::before {
+            content: "";
+            position: absolute;
+            top: -1px;
+            right: -1px;
+            width: 101%;
+            height: 100.4%;
+            //background-color: red;
+            z-index: -1;
+            border-radius: inherit;
+            background: linear-gradient(180deg, #102019, #00e676, #11231B);
+          }
+  
+          background-color: #162E1E;
+  
+          .btn {
+            min-width: 164px;
+            max-width: 232px !important;
+          }
+  
+          .plan-card-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+  
+            img {
+              margin: 0;
+            }
+          }
+  
+          .plan-label {
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+  
+            text-align: start;
+  
+            font-weight: 1.25rem;
+            color: $white;
+            font-weight: 600;
+  
+            span {
+              font-size: 12px;
+              font-weight: 400;
+              text-transform: capitalize !important;
+              color: $white-dark;
+            }
+  
+          }
+  
+          .plan-price {
+            font-size: 2rem;
+            color: $green-ligth;
+            font-weight: 700;
+            transition: opacity .2s;
+            position: relative;
+  
+            // display: flex;
+            justify-content: center;
+            align-items: center;
+  
+            &::before {
+              content: "R$";
+              display: inline-block;
+              font-size: 1rem;
+              vertical-align: 5px;
+              margin-right: 8px;
+            }
+  
+            &::after {
+              content: ",00";
+              display: inline-block;
+              font-size: 1.5rem;
+              vertical-align: 5px;
+              margin-right: 8px;
+            }
+  
+            span {
+              display: block;
+              font-size: 0.875rem;
+              color: $white-dark;
+              font-weight: 400;
+              margin: 0;
+              padding: 0;
+            }
+          }
+  
+          .plan-price.mensal.active,
+          .plan-price.anual.active {
             opacity: 1;
           }
-
-          span {
-            display: block;
-            font-size: 0.875rem;
-            color: $white-dark;
-            font-weight: 400;
-            margin: 0;
+  
+          .btn {
+            margin-bottom: 1rem;
+          }
+  
+          .line-price {
+            margin-top: 24px;
+            margin-bottom: 32px;
+          }
+  
+          .plan-features {
+            list-style: none;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 12px;
+            position: relative;
+  
+            li {
+              margin-bottom: .5rem;
+              color: $white;
+  
+              display: flex;
+              justify-content: start;
+              align-items: center;
+  
+              img {
+                margin: 0;
+                margin-right: 8px;
+              }
+            }
           }
-        }
-
-        .plan-price.mensal.active,
-        .plan-price.anual.active {
-          opacity: 1;
-        }
-
-        .btn {
-          margin-bottom: 1rem;
-        }
-        
-        .line-price {
-          margin-top: 24px;
-          margin-bottom: 32px;
-        }
-
-        .plan-features {
-          list-style: none;
-          padding: 0;
-         
-          li {
-            margin-bottom: .5rem;
-            color: $white;
+  
+          &.recommended {
+            &::after {
+              border-radius: 100px;
+              content: "🚀 maior procura";
+              position: absolute;
+              width: 140px;
+              height: 30px;
+              top: -12px;
+              right: 45px;
+              background: $green-ligth;
+              border: 2px solid $white;
+              z-index: 1;
+              border: none;
+              padding: 8px;
+              font-size: 12px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-transform: uppercase;
+              box-shadow: rgb(134 201 145 / 20%) 0px 0px 29px 6px;
+              font-weight: 500;
+            }
           }
-        }
-
-        &.recommended {
-          border: 2px solid $white;
+  
         }
       }
-    }
+      
+
+      .faq-accordion {
+        margin-top: 56px;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+      }
+  
+      .faq-item {
+        
+        border: 1px solid #b5b9a818;
+        border-radius: 6px;
+        overflow: hidden;
+        background: transparent;
+        width: 100%;
+        border-radius: 12px;
+        transition: background 0.3s ease;
+      }
+  
+      .faq-summary {
+        color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        padding: 12px;
+        font-weight: 400;
+  
+        .faq-item-icon {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          gap: 12px;
+
+          .anual,
+          .ano {
+            display: none;
+          }
+  
+
+          .plan-card-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+  
+            img {
+              margin: 0;
+            }
+          }
+  
+          .plan-label {
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+  
+            text-align: start;
+  
+            font-weight: 1.25rem;
+            color: $white;
+            font-weight: 600;
+  
+            span {
+              font-size: 12px;
+              font-weight: 400;
+              text-transform: capitalize !important;
+              color: $white-dark;
+            }
+  
+          }
+
+          .wrapper-price {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+
+            .plan-price-mobile-details {
+              color: $green-ligth;
+              font-weight: 700;
+              font-size: 1rem !important;
+            }
+
+            .mes, .ano {
+              font-size: 12px !important;
+            }
+          }
+        }
+  
+        .faq-arrow {
+          transition: transform 0.3s ease;
+        }
+      }
+  
+      /* Rotaciona a seta quando aberto */
+      .faq-item[open] .faq-arrow {
+        transform: rotate(-180deg);
+      }
+  
+      .faq-answer {
+
+        .title-faq {
+          font-size: 1.25rem !important;
+          font-weight: 700;
+          text-align: start;
+          margin-top: 48px;
+          color: $white;
+        }
+
+        text-align: start;
+        padding: 12px;
+        animation: fadeIn 0.3s ease;
+        background: transparent;
+        .faq-wrapper {
+          div:last-child {
+            li:last-child {
+              border-bottom: none;
+            }
+          }
+        }
+  
+        ul {
+          margin-top: 32px;
+          list-style: none;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: start;
+        }
+  
+        li {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          align-items: center;
+          color: #FFF9E9;
+          font-size: 1rem;
+          border-top: 1px solid #b5b9a818;
+          padding: 16px 0;
+          font-weight: 400;
+          
+          img {
+            margin: 0;
+            height: 24px;
+            width: 24px;
+          }
+        }
+
+       li:last-child {
+        border-bottom: 1px solid #b5b9a818;
+       }
+       
+      }
   }
 
   .features-table {
     padding: 2rem 0;
 
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 120px;
+    }
+
     .table-group {
       margin-bottom: 2rem;
 
-      .table-title {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
+    .table-title {
+      font-size: 1.5rem;
+      margin-bottom: 46px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+
+      th,
+      td {
+        text-align: center;
+        border: 1px solid #b5b9a818;
       }
 
-      table {
-        width: 100%;
-        border-collapse: collapse;
-
-        th,
-        td {
-          padding: .75rem;
-          text-align: center;
-          border: 1px solid rgba(255, 255, 255, .1);
-        }
-
-        th {
-          background: rgba(255, 255, 255, .05);
-        }
-
-        td.check::before {
-          content: '\2713';
-          color: $white;
-        }
+      th {
+        background: rgba(255, 255, 255);
       }
+
+      // canto superior esquerdo
+      th:first-child {
+        border-top-left-radius: 12px;
+      }
+      // canto superior direito
+      th:last-child {
+        border-top-right-radius: 12px;
+      }
+
+      tbody tr:first-child td:first-child {
+        border-top-left-radius: 12px;
+      }
+      tbody tr:first-child td:last-child {
+        border-top-right-radius: 12px;
+      }
+
+      // canto inferior esquerdo: aplica no último <tr> do tbody, primeira <td>
+      tbody tr:last-child td:first-child {
+        border-bottom-left-radius: 12px;
+      }
+      // canto inferior direito
+      tbody tr:last-child td:last-child {
+        border-bottom-right-radius: 12px;
+      }
+
+      // células da primeira coluna (nome)
+      td:first-child {
+        min-width: 310px;
+        height: 60px;
+        color: $white;
+        font-weight: 700;
+        text-align: start;
+        padding-left: 24px;
+      }
+
+      // células com check
+      td.check {
+        color: $white-dark;
+        min-width: 220px;
+      }
+    }
     }
   }
 
   .faq-section {
-    padding: 2rem 0;
+    padding: 2rem 1rem;
+
+    .container {
+      flex-direction: column;
+      max-width: 800px;
+    }
+
+    .faq-title {
+      margin-bottom: 80px;
+    }
 
     .accordion-item {
       border-bottom: 1px solid rgba(255, 255, 255, .1);
@@ -280,16 +627,37 @@
         display: flex;
         justify-content: space-between;
         cursor: pointer;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .faq-arrow {
+          transition: transform 0.3s ease;
+        }
+
+        img {
+          margin: 0;
+        }
       }
 
       .accordion-content {
         max-height: 0;
         overflow: hidden;
         transition: max-height .3s;
-        margin-bottom: 0;
+        margin-bottom: 16px;
+        color: $white-dark;
+        font-weight: 400;
       }
 
       &.open {
+
+        .accordion-header {
+        .faq-arrow {
+            transform: rotate(180deg);
+          }
+        }
+
         .accordion-content {
           max-height: 200px;
           margin-top: .5rem;
@@ -299,33 +667,107 @@
   }
 }
 
-// Mobile Collapse Groups
-@media (max-width: 768px) {
-  .features-table .table-group {
-    margin-bottom: 1rem;
 
-    table {
-      display: none;
-    }
+@include responsive(s) {
+  .pricing-page {
+    section.pricing-hero {
+      .container {
+        .pretitle {
+          font-size: 0.875rem;
+        }
 
-    h2.table-title {
-      cursor: pointer;
-      position: relative;
+        .g1, .g2, .g3 {
+          display: none !important;
+        } 
 
-      &::after {
-        content: '\25BC';
-        position: absolute;
-        right: 0;
-        transition: transform .2s;
+        .title {
+          font-size: 2.125rem;
+        }
+
+        .toggle-pricing {
+
+          .discount-note {
+            left: 66px;
+          }
+
+          .discount-note-img {
+            left: 200px;
+          }
+        }
+
       }
     }
+  }
 
-    &.open table {
-      display: table;
+  .pricing-cards {
+    .container {
+      padding: 0;
+      .title-mobile {
+            display: block !important;
+            color: #00DD7D;
+            text-transform: uppercase !important;
+            font-weight: 700;
+            font-size: 0.875rem !important;
+      }
+      .card-grid {
+        gap: 0 !important;
+        text-align: center;
+        .card-price-title {
+            .title, img {
+            display: none !important;
+            }
+          }
+        }
     }
 
-    &.open h2.table-title::after {
-      transform: rotate(180deg);
+    .faq-accordion {
+      display: flex !important;
+    }
+
+    .plan-wrapper {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      gap: 1rem;
+      padding: 0 1rem;
+
+      padding: 40px 8px;
+    }
+
+    .plan-card {
+      flex: 0 0 80%;
+      max-width: 300px;
+      margin-bottom: 0;
+
+      .plan-price {
+        font-size: 3rem !important;
+
+        &::before {   
+          vertical-align: 8px !important;
+          margin-right: 8px;
+        }
+      }
+
+      &.recommended {
+            &::after {
+              top: -12px;
+              right: 65px !important;
+            }
+      }
+    }
+  }
+
+  .features-table {
+    display: none;
+  }
+
+  .faq-section {
+    .container {
+      .faq-title {
+        font-size: 1.5rem;
+        margin-bottom: 40px;
+      }
     }
   }
 }

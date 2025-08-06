@@ -214,18 +214,84 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Toggle e accordion
+// document.querySelectorAll('.toggle-btn').forEach(btn => {
+//     btn.addEventListener('click', () => {
+//       document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+//       btn.classList.add('active');
+//       const type = btn.dataset.type;
+//       document.querySelectorAll('.plan-price').forEach(p => p.classList.toggle('active', p.classList.contains(type)));
+//     });
+// });
+
 document.querySelectorAll('.toggle-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const type = btn.dataset.type;
-      document.querySelectorAll('.plan-price').forEach(p => p.classList.toggle('active', p.classList.contains(type)));
+  btn.addEventListener('click', () => {
+    // atualiza visual do toggle
+    document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const type = btn.dataset.type; // 'mensal' ou 'anual'
+
+    // para cada card, mostre um e oculte o outro
+    document.querySelectorAll('.plan-card').forEach(card => {
+      const mensalEl = card.querySelector('.plan-price.mensal');
+      const anualEl  = card.querySelector('.plan-price.anual');
+      const mensalEl1 = card.querySelector('.mes');
+      const anualEl1  = card.querySelector('.ano');
+      
+      if (type === 'mensal') {
+        mensalEl.style.display = 'flex';
+        anualEl.style.display  = 'none';
+
+        mensalEl1.style.display = 'flex';
+        anualEl1.style.display = 'none';
+      } else {
+        mensalEl.style.display = 'none';
+        anualEl.style.display  = 'flex';
+
+        mensalEl1.style.display = 'none';
+        anualEl1.style.display = 'flex';
+      }
     });
+
+    // para cada card, mostre um e oculte o outro
+    document.querySelectorAll('.faq-item-icon').forEach(card => {
+      const mensalEl = card.querySelector('.plan-price-mobile-details.mensal');
+      const anualEl  = card.querySelector('.plan-price-mobile-details.anual');
+      const mensalEl1 = card.querySelector('.mes');
+      const anualEl1  = card.querySelector('.ano');
+
+      console.log(mensalEl)
+      
+      if (type === 'mensal') {
+        mensalEl.style.display = 'block';
+        anualEl.style.display  = 'none';
+
+        mensalEl1.style.display = 'block';
+        anualEl1.style.display = 'none';
+      } else {
+        mensalEl.style.display = 'none';
+        anualEl.style.display  = 'block';
+        
+        mensalEl1.style.display = 'none';
+        anualEl1.style.display = 'block';
+      }
+    });
+  });
 });
 
 document.querySelectorAll('.accordion-header').forEach(header => {
   header.addEventListener('click', () => {
-    const item = header.parentElement;
-    item.classList.toggle('open');
+    const item = header.parentElement; // .accordion-item
+    const isOpen = item.classList.contains('open');
+
+    // fecha todos (se quiser um só aberto por vez)
+    document.querySelectorAll('.accordion-item.open').forEach(openItem => {
+      openItem.classList.remove('open');
+    });
+
+    // alterna o atual
+    if (!isOpen) {
+      item.classList.add('open');
+    }
   });
 });
