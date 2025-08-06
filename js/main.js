@@ -213,69 +213,120 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Toggle e accordion
+
 // document.querySelectorAll('.toggle-btn').forEach(btn => {
-//     btn.addEventListener('click', () => {
-//       document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
-//       btn.classList.add('active');
-//       const type = btn.dataset.type;
-//       document.querySelectorAll('.plan-price').forEach(p => p.classList.toggle('active', p.classList.contains(type)));
+//   btn.addEventListener('click', () => {
+//     // atualiza visual do toggle
+//     document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+//     btn.classList.add('active');
+
+//     const type = btn.dataset.type; // 'mensal' ou 'anual'
+
+//     // para cada card, mostre um e oculte o outro
+//     document.querySelectorAll('.plan-card').forEach(card => {
+//       const mensalEl = card.querySelector('.plan-price.mensal');
+//       const anualEl  = card.querySelector('.plan-price.anual');
+//       const mensalEl1 = card.querySelector('.mes');
+//       const anualEl1  = card.querySelector('.ano');
+      
+//       if (type === 'mensal') {
+//         mensalEl.style.display = 'flex';
+//         anualEl.style.display  = 'none';
+
+//         mensalEl1.style.display = 'flex';
+//         anualEl1.style.display = 'none';
+//       } else {
+//         mensalEl.style.display = 'none';
+//         anualEl.style.display  = 'flex';
+
+//         mensalEl1.style.display = 'none';
+//         anualEl1.style.display = 'flex';
+//       }
 //     });
+
+//     // para cada card, mostre um e oculte o outro
+//     document.querySelectorAll('.faq-item-icon').forEach(card => {
+//       const mensalEl = card.querySelector('.plan-price-mobile-details.mensal');
+//       const anualEl  = card.querySelector('.plan-price-mobile-details.anual');
+//       const mensalEl1 = card.querySelector('.mes');
+//       const anualEl1  = card.querySelector('.ano');
+
+//       console.log(mensalEl)
+      
+//       if (type === 'mensal') {
+//         mensalEl.style.display = 'block';
+//         anualEl.style.display  = 'none';
+
+//         mensalEl1.style.display = 'block';
+//         anualEl1.style.display = 'none';
+//       } else {
+//         mensalEl.style.display = 'none';
+//         anualEl.style.display  = 'block';
+        
+//         mensalEl1.style.display = 'none';
+//         anualEl1.style.display = 'block';
+//       }
+//     });
+//   });
 // });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleCheckbox = document.getElementById('menu-toggle');
+  const closeBtn       = document.getElementById('btn-close');
+
+  toggleCheckbox.addEventListener('change', () => {
+    document.body.classList.toggle('no-scroll', toggleCheckbox.checked);
+  });
+
+  closeBtn.addEventListener('click', () => {
+    toggleCheckbox.checked = false;
+    document.body.classList.remove('no-scroll');
+  });
+});
+
+// Toggle e accordion
 document.querySelectorAll('.toggle-btn').forEach(btn => {
   btn.addEventListener('click', () => {
-    // atualiza visual do toggle
+    // ATUALIZA O VISUAL DO BOTÃO
     document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
 
     const type = btn.dataset.type; // 'mensal' ou 'anual'
+    const isAnnual = type === 'anual';
 
-    // para cada card, mostre um e oculte o outro
+    // ADICIONA/REMOVE A CLASSE NO BODY PARA ATIVAR O CSS
+    document.body.classList.toggle('anual-active', isAnnual);
+
+    // TROCA OS PREÇOS E TEXTOS 'POR MÊS' / 'POR ANO' NOS CARDS PRINCIPAIS
     document.querySelectorAll('.plan-card').forEach(card => {
-      const mensalEl = card.querySelector('.plan-price.mensal');
-      const anualEl  = card.querySelector('.plan-price.anual');
-      const mensalEl1 = card.querySelector('.mes');
-      const anualEl1  = card.querySelector('.ano');
-      
-      if (type === 'mensal') {
-        mensalEl.style.display = 'flex';
-        anualEl.style.display  = 'none';
-
-        mensalEl1.style.display = 'flex';
-        anualEl1.style.display = 'none';
-      } else {
-        mensalEl.style.display = 'none';
-        anualEl.style.display  = 'flex';
-
-        mensalEl1.style.display = 'none';
-        anualEl1.style.display = 'flex';
-      }
+      card.querySelector('.plan-price.mensal').style.display = isAnnual ? 'none' : 'flex';
+      card.querySelector('.plan-price.anual').style.display  = isAnnual ? 'flex' : 'none';
+      card.querySelector('.mes').style.display = isAnnual ? 'none' : 'flex';
+      card.querySelector('.ano').style.display  = isAnnual ? 'flex' : 'none';
     });
-
-    // para cada card, mostre um e oculte o outro
+    
+    // TROCA OS PREÇOS E TEXTOS NOS DETALHES (FAQ/ACCORDION)
     document.querySelectorAll('.faq-item-icon').forEach(card => {
-      const mensalEl = card.querySelector('.plan-price-mobile-details.mensal');
-      const anualEl  = card.querySelector('.plan-price-mobile-details.anual');
-      const mensalEl1 = card.querySelector('.mes');
-      const anualEl1  = card.querySelector('.ano');
-
-      console.log(mensalEl)
-      
-      if (type === 'mensal') {
-        mensalEl.style.display = 'block';
-        anualEl.style.display  = 'none';
-
-        mensalEl1.style.display = 'block';
-        anualEl1.style.display = 'none';
-      } else {
-        mensalEl.style.display = 'none';
-        anualEl.style.display  = 'block';
-        
-        mensalEl1.style.display = 'none';
-        anualEl1.style.display = 'block';
-      }
+      card.querySelector('.plan-price-mobile-details.mensal').style.display = isAnnual ? 'none' : 'block';
+      card.querySelector('.plan-price-mobile-details.anual').style.display  = isAnnual ? 'block' : 'none';
+      card.querySelector('.mes').style.display = isAnnual ? 'none' : 'block';
+      card.querySelector('.ano').style.display  = isAnnual ? 'block' : 'none';
     });
+
+    // TROCA AS IMAGENS
+    document.querySelectorAll('img[data-annual-src]').forEach(img => {
+        const originalSrc = img.dataset.originalSrc;
+        const annualSrc = img.dataset.annualSrc;
+        img.src = isAnnual ? annualSrc : originalSrc;
+    });
+
+    // TROCA OS TEXTOS
+    document.querySelectorAll('[data-text-anual]').forEach(el => {
+      const monthlyText = el.dataset.textMensal;
+      const annualText = el.dataset.textAnual;
+      el.textContent = isAnnual ? annualText : monthlyText;
+    });
+
   });
 });
 

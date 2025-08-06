@@ -223,7 +223,6 @@
             right: -1px;
             width: 101%;
             height: 100.4%;
-            //background-color: red;
             z-index: -1;
             border-radius: inherit;
             background: linear-gradient(180deg, #102019, #00e676, #11231B);
@@ -616,7 +615,6 @@
             right: -1px;
             width: 101%;
             height: 100.4%;
-            //background-color: red;
             z-index: -1;
             border-radius: inherit;
             background: linear-gradient(180deg, #102019, #00e676, #11231B);
@@ -771,6 +769,96 @@
         .accordion-content {
           max-height: 200px;
           margin-top: .5rem;
+        }
+      }
+    }
+  }
+}
+
+
+// ===================================
+// ESTILOS PARA O PLANO ANUAL (TEMA AMARELO)
+// ===================================
+body.anual-active {
+  .pricing-hero {
+    .pretitle {
+      color: #DEE04A !important;
+    }
+
+    .title {
+      span {
+        color: #DEE04A !important;
+      }
+    }
+    .toggle-pricing {
+      border-color: #DEE04A !important;
+
+      .toggle-btn.active {
+        background: #DEE04A !important;
+        color: #0D2616 !important; // Cor do texto para contraste
+      }
+
+      .discount-note {
+        color: #DEE04A !important;
+      }
+    }
+  }
+
+  .pricing-cards {
+    .title-mobile {
+      color: #DEE04A !important;
+    }
+
+    .pricing-cards-info {
+
+      .item-card-plan {
+
+        &::before {
+          background: linear-gradient(180deg, #102019, #DEE04A, #11231B);
+        }
+
+        .btn {
+          background: #DEE04A !important;
+        }
+      }
+    } 
+
+    .faq-wrapper {
+      .btn {
+          background: #DEE04A !important;
+        }
+    }
+
+    .plan-card {
+      .plan-price {
+        color: #DEE04A !important;
+      }
+
+      &::before {
+        background: linear-gradient(180deg, #102019, #DEE04A, #11231B) !important;
+      }
+
+      &.recommended::after {
+        background: #DEE04A !important;
+        color: #0D2616;
+        box-shadow: rgba(222, 224, 74, 0.2) 0px 0px 29px 6px;
+      }
+
+      .btn {
+        background: #DEE04A !important;
+      }
+    }
+
+    .faq-item-icon .wrapper-price .plan-price-mobile-details {
+      color: #DEE04A !important;
+    }
+  }
+
+  .features-table {
+    .table-group {
+      table {
+        td.check {
+          color: #fff;
         }
       }
     }

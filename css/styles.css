@@ -1709,6 +1709,55 @@ strong {
   margin-top: 0.5rem;
 }
 
+body.anual-active .pricing-hero .pretitle {
+  color: #DEE04A !important;
+}
+body.anual-active .pricing-hero .title span {
+  color: #DEE04A !important;
+}
+body.anual-active .pricing-hero .toggle-pricing {
+  border-color: #DEE04A !important;
+}
+body.anual-active .pricing-hero .toggle-pricing .toggle-btn.active {
+  background: #DEE04A !important;
+  color: #0D2616 !important;
+}
+body.anual-active .pricing-hero .toggle-pricing .discount-note {
+  color: #DEE04A !important;
+}
+body.anual-active .pricing-cards .title-mobile {
+  color: #DEE04A !important;
+}
+body.anual-active .pricing-cards .pricing-cards-info .item-card-plan::before {
+  background: linear-gradient(180deg, #102019, #DEE04A, #11231B);
+}
+body.anual-active .pricing-cards .pricing-cards-info .item-card-plan .btn {
+  background: #DEE04A !important;
+}
+body.anual-active .pricing-cards .faq-wrapper .btn {
+  background: #DEE04A !important;
+}
+body.anual-active .pricing-cards .plan-card .plan-price {
+  color: #DEE04A !important;
+}
+body.anual-active .pricing-cards .plan-card::before {
+  background: linear-gradient(180deg, #102019, #DEE04A, #11231B) !important;
+}
+body.anual-active .pricing-cards .plan-card.recommended::after {
+  background: #DEE04A !important;
+  color: #0D2616;
+  box-shadow: rgba(222, 224, 74, 0.2) 0px 0px 29px 6px;
+}
+body.anual-active .pricing-cards .plan-card .btn {
+  background: #DEE04A !important;
+}
+body.anual-active .pricing-cards .faq-item-icon .wrapper-price .plan-price-mobile-details {
+  color: #DEE04A !important;
+}
+body.anual-active .features-table .table-group table td.check {
+  color: #fff;
+}
+
 @media screen and (max-width: 960px) {
   .pricing-page section.pricing-hero .container .pretitle {
     font-size: 0.875rem;
